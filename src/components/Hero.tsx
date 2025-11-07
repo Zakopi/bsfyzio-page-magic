@@ -9,7 +9,7 @@ const Hero = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="order-2 md:order-1">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight text-foreground">
-              Profesionální fyzioterapie
+              b.s.fyzio Profesionální terapie
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-muted-foreground leading-relaxed">
               Fyzioterapie pomáhá lidem vracet radost z pohybu a znovu objevovat sílu 
