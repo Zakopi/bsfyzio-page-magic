@@ -1,6 +1,13 @@
 import { Star, Quote } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 const testimonials = [{
   name: "Jana Nováková",
   text: "Paní Stará mi pomohla zbavit se chronických bolestí zad, které mě trápily roky. Její profesionální a empatický přístup je úžasný. Konečně se mohu vrátit ke sportu!",
@@ -40,31 +47,46 @@ const Testimonials = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, index) => <Card key={index} className="relative overflow-hidden border-primary/10 hover:shadow-medium transition-all duration-300">
-              <CardContent className="p-6">
-                <Quote className="h-10 w-10 text-primary/20 mb-4" />
-                
-                <div className="flex gap-1 mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star 
-                      key={i} 
-                      className="h-5 w-5 fill-primary text-primary transition-transform duration-300 hover:scale-125 hover:rotate-12" 
-                    />
-                  ))}
-                </div>
+        <Carousel
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+          className="w-full max-w-5xl mx-auto"
+        >
+          <CarouselContent>
+            {testimonials.map((testimonial, index) => (
+              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                <Card className="relative overflow-hidden border-primary/10 hover:shadow-medium transition-all duration-300 h-full">
+                  <CardContent className="p-6">
+                    <Quote className="h-10 w-10 text-primary/20 mb-4" />
+                    
+                    <div className="flex gap-1 mb-4">
+                      {[...Array(testimonial.rating)].map((_, i) => (
+                        <Star 
+                          key={i} 
+                          className="h-5 w-5 fill-primary text-primary transition-transform duration-300 hover:scale-125 hover:rotate-12" 
+                        />
+                      ))}
+                    </div>
 
-                <p className="text-muted-foreground mb-6 leading-relaxed italic">"Po úrazu ramene jsem byl v péči několika terapeutů, ale teprve zde jsem dosáhl skutečného zlepšení. Individuální přístup a odbornost na vysoké úrovni."{testimonial.text}"
-                </p>
+                    <p className="text-muted-foreground mb-6 leading-relaxed italic">
+                      "{testimonial.text}"
+                    </p>
 
-                <div className="pt-4 border-t border-border/50">
-                  <p className="font-semibold text-foreground">
-                    {testimonial.name}
-                  </p>
-                </div>
-              </CardContent>
-            </Card>)}
-        </div>
+                    <div className="pt-4 border-t border-border/50">
+                      <p className="font-semibold text-foreground">
+                        {testimonial.name}
+                      </p>
+                    </div>
+                  </CardContent>
+                </Card>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious className="left-0 md:-left-12" />
+          <CarouselNext className="right-0 md:-right-12" />
+        </Carousel>
 
         <div className="text-center mt-12">
           <p className="text-muted-foreground text-lg">
