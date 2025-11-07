@@ -96,7 +96,7 @@ const About = () => {
   }, [hasAnimated]);
 
   return (
-    <section className="py-12 md:py-16">
+    <section className="pt-6 pb-12 md:pt-8 md:pb-16">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
