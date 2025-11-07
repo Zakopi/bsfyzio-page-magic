@@ -4,7 +4,7 @@ import heroImage from "@/assets/hero-physiotherapist.jpg";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-[90vh] flex items-center bg-gradient-to-br from-background via-background to-primary/5">
+    <section className="relative min-h-[85vh] flex items-center bg-gradient-to-br from-background via-background to-primary/5 pb-8">
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="order-2 md:order-1">

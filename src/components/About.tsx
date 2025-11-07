@@ -18,7 +18,7 @@ const goals = [
 
 const About = () => {
   return (
-    <section className="py-20">
+    <section className="py-12 md:py-16">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
