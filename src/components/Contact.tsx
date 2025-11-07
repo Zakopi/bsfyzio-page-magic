@@ -20,7 +20,7 @@ const contactInfo = [
   {
     icon: MapPin,
     title: "Adresa",
-    content: "Praha, Česká republika",
+    content: "Bílovec, Česká republika",
     link: "#",
   },
   {
