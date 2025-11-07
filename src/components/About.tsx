@@ -11,13 +11,15 @@ const About = () => {
   const [yearsCount, setYearsCount] = useState(0);
   const [yearCount, setYearCount] = useState(2000);
   const [patientsCount, setPatientsCount] = useState(0);
-  const [hasAnimated, setHasAnimated] = useState(false);
   const statsRef = useRef<HTMLDivElement>(null);
+  const timersRef = useRef<NodeJS.Timeout[]>([]);
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
-        if (entry.isIntersecting && !hasAnimated) {
-          setHasAnimated(true);
+        if (entry.isIntersecting) {
+          // Clear any existing timers
+          timersRef.current.forEach(timer => clearInterval(timer));
+          timersRef.current = [];
 
           // Animate years of experience (10+)
           let yearsStart = 0;
@@ -33,6 +35,7 @@ const About = () => {
               setYearsCount(Math.floor(yearsStart));
             }
           }, 16);
+          timersRef.current.push(yearsTimer);
 
           // Animate year (2012)
           let yearStart = 2000;
@@ -48,6 +51,7 @@ const About = () => {
               setYearCount(Math.floor(yearStart));
             }
           }, 16);
+          timersRef.current.push(yearTimer);
 
           // Animate patients count (99+)
           let patientsStart = 0;
@@ -63,6 +67,12 @@ const About = () => {
               setPatientsCount(Math.floor(patientsStart));
             }
           }, 16);
+          timersRef.current.push(patientsTimer);
+        } else {
+          // Reset values when leaving viewport
+          setYearsCount(0);
+          setYearCount(2000);
+          setPatientsCount(0);
         }
       });
     }, {
@@ -75,8 +85,10 @@ const About = () => {
       if (statsRef.current) {
         observer.unobserve(statsRef.current);
       }
+      // Clean up timers on unmount
+      timersRef.current.forEach(timer => clearInterval(timer));
     };
-  }, [hasAnimated]);
+  }, []);
   return <section ref={scrollRef} className={`pt-6 pb-12 md:pt-8 md:pb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-12 items-center">
