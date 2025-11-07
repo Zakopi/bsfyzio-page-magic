@@ -12,8 +12,8 @@ const Hero = () => {
               Profesionální fyzioterapie
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-muted-foreground leading-relaxed">
-              Individuální přístup, moderní metody a péče o vaše zdraví. 
-              Pomohu vám vrátit se do formy a žít bez bolesti.
+              Fyzioterapie pomáhá lidem vracet radost z pohybu a znovu objevovat sílu 
+              vlastního těla. Ráda vám pomohu vašemu tělu znovu naslouchat a vnímat jej.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" variant="default" className="text-lg">
