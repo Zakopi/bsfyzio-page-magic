@@ -14,8 +14,8 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email",
-    content: "info@bsfyzio.cz",
-    link: "mailto:info@bsfyzio.cz",
+    content: "sokolova.b@email.cz",
+    link: "mailto:sokolova.b@email.cz",
   },
   {
     icon: MapPin,
