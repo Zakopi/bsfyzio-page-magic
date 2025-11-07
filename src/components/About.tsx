@@ -1,104 +1,83 @@
 import { CheckCircle } from "lucide-react";
 import { useEffect, useState, useRef } from "react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
-
-const services = [
-  "Bolesti zad",
-  "Funkční poruchy",
-  "Stavy po úrazech a operacích",
-  "Prevence vzniku degenerativních poruch",
-  "Problematika pánevního dna",
-  "Bolestivá menstruace a inkontinence",
-];
-
-const goals = [
-  "Individuální přístup",
-  "Hledání souvislostí",
-  "Pátrání po příčinách",
-  "Pomáhat k pohybu bez bolesti",
-];
-
+const services = ["Bolesti zad", "Funkční poruchy", "Stavy po úrazech a operacích", "Prevence vzniku degenerativních poruch", "Problematika pánevního dna", "Bolestivá menstruace a inkontinence"];
+const goals = ["Individuální přístup", "Hledání souvislostí", "Pátrání po příčinách", "Pomáhat k pohybu bez bolesti"];
 const About = () => {
-  const { ref: scrollRef, isVisible } = useScrollAnimation();
+  const {
+    ref: scrollRef,
+    isVisible
+  } = useScrollAnimation();
   const [yearsCount, setYearsCount] = useState(0);
   const [yearCount, setYearCount] = useState(2000);
   const [patientsCount, setPatientsCount] = useState(0);
   const [hasAnimated, setHasAnimated] = useState(false);
   const statsRef = useRef<HTMLDivElement>(null);
-
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting && !hasAnimated) {
-            setHasAnimated(true);
-            
-            // Animate years of experience (10+)
-            let yearsStart = 0;
-            const yearsEnd = 10;
-            const yearsDuration = 2000;
-            const yearsIncrement = yearsEnd / (yearsDuration / 16);
-            
-            const yearsTimer = setInterval(() => {
-              yearsStart += yearsIncrement;
-              if (yearsStart >= yearsEnd) {
-                setYearsCount(yearsEnd);
-                clearInterval(yearsTimer);
-              } else {
-                setYearsCount(Math.floor(yearsStart));
-              }
-            }, 16);
-            
-            // Animate year (2012)
-            let yearStart = 2000;
-            const yearEnd = 2012;
-            const yearDuration = 2000;
-            const yearIncrement = (yearEnd - yearStart) / (yearDuration / 16);
-            
-            const yearTimer = setInterval(() => {
-              yearStart += yearIncrement;
-              if (yearStart >= yearEnd) {
-                setYearCount(yearEnd);
-                clearInterval(yearTimer);
-              } else {
-                setYearCount(Math.floor(yearStart));
-              }
-            }, 16);
-            
-            // Animate patients count (99+)
-            let patientsStart = 0;
-            const patientsEnd = 99;
-            const patientsDuration = 2000;
-            const patientsIncrement = patientsEnd / (patientsDuration / 16);
-            
-            const patientsTimer = setInterval(() => {
-              patientsStart += patientsIncrement;
-              if (patientsStart >= patientsEnd) {
-                setPatientsCount(patientsEnd);
-                clearInterval(patientsTimer);
-              } else {
-                setPatientsCount(Math.floor(patientsStart));
-              }
-            }, 16);
-          }
-        });
-      },
-      { threshold: 0.3 }
-    );
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !hasAnimated) {
+          setHasAnimated(true);
 
+          // Animate years of experience (10+)
+          let yearsStart = 0;
+          const yearsEnd = 10;
+          const yearsDuration = 2000;
+          const yearsIncrement = yearsEnd / (yearsDuration / 16);
+          const yearsTimer = setInterval(() => {
+            yearsStart += yearsIncrement;
+            if (yearsStart >= yearsEnd) {
+              setYearsCount(yearsEnd);
+              clearInterval(yearsTimer);
+            } else {
+              setYearsCount(Math.floor(yearsStart));
+            }
+          }, 16);
+
+          // Animate year (2012)
+          let yearStart = 2000;
+          const yearEnd = 2012;
+          const yearDuration = 2000;
+          const yearIncrement = (yearEnd - yearStart) / (yearDuration / 16);
+          const yearTimer = setInterval(() => {
+            yearStart += yearIncrement;
+            if (yearStart >= yearEnd) {
+              setYearCount(yearEnd);
+              clearInterval(yearTimer);
+            } else {
+              setYearCount(Math.floor(yearStart));
+            }
+          }, 16);
+
+          // Animate patients count (99+)
+          let patientsStart = 0;
+          const patientsEnd = 99;
+          const patientsDuration = 2000;
+          const patientsIncrement = patientsEnd / (patientsDuration / 16);
+          const patientsTimer = setInterval(() => {
+            patientsStart += patientsIncrement;
+            if (patientsStart >= patientsEnd) {
+              setPatientsCount(patientsEnd);
+              clearInterval(patientsTimer);
+            } else {
+              setPatientsCount(Math.floor(patientsStart));
+            }
+          }, 16);
+        }
+      });
+    }, {
+      threshold: 0.3
+    });
     if (statsRef.current) {
       observer.observe(statsRef.current);
     }
-
     return () => {
       if (statsRef.current) {
         observer.unobserve(statsRef.current);
       }
     };
   }, [hasAnimated]);
-
-  return (
-    <section ref={scrollRef} className={`pt-6 pb-12 md:pt-8 md:pb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+  return <section ref={scrollRef} className={`pt-6 pb-12 md:pt-8 md:pb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
@@ -115,30 +94,23 @@ const About = () => {
             </p>
 
             <div className="space-y-3 mb-8">
-              {services.map((service, index) => (
-                <div key={index} className="flex items-start gap-3">
+              {services.map((service, index) => <div key={index} className="flex items-start gap-3">
                   <CheckCircle className="h-6 w-6 text-primary mt-0.5 flex-shrink-0" />
                   <span className="text-foreground">{service}</span>
-                </div>
-              ))}
+                </div>)}
             </div>
 
             <p className="text-lg font-semibold text-foreground mb-4">
               Mým cílem je:
             </p>
             <div className="space-y-3 mb-6">
-              {goals.map((goal, index) => (
-                <div key={index} className="flex items-start gap-3">
+              {goals.map((goal, index) => <div key={index} className="flex items-start gap-3">
                   <span className="text-primary font-bold">👊</span>
                   <span className="text-foreground">{goal}</span>
-                </div>
-              ))}
+                </div>)}
             </div>
 
-            <p className="text-lg text-muted-foreground leading-relaxed italic">
-              Fyzioterapie pomáhá lidem vracet radost z pohybu a znovu objevovat sílu 
-              vlastního těla. Ráda vám pomohu vašemu tělu znovu naslouchat a vnímat jej.
-            </p>
+            <p className="text-lg text-muted-foreground leading-relaxed italic">Fyzioterapie pomáhá lidem vracet radost z pohybu a znovu objevovat sílu vlastního těla. Ráda pomohu vašemu tělu znovu naslouchat a vnímat jej.</p>
           </div>
 
           <div className="relative">
@@ -180,8 +152,6 @@ const About = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default About;
