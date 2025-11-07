@@ -1,5 +1,6 @@
 import { CheckCircle } from "lucide-react";
 import { useEffect, useState, useRef } from "react";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const services = [
   "Bolesti zad",
@@ -18,6 +19,7 @@ const goals = [
 ];
 
 const About = () => {
+  const { ref: scrollRef, isVisible } = useScrollAnimation();
   const [yearsCount, setYearsCount] = useState(0);
   const [yearCount, setYearCount] = useState(2000);
   const [patientsCount, setPatientsCount] = useState(0);
@@ -96,7 +98,7 @@ const About = () => {
   }, [hasAnimated]);
 
   return (
-    <section className="pt-6 pb-12 md:pt-8 md:pb-16">
+    <section ref={scrollRef} className={`pt-6 pb-12 md:pt-8 md:pb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
