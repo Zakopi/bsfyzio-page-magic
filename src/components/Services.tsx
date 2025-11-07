@@ -1,36 +1,36 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Activity, Heart, Users, Zap, Dumbbell, Stethoscope } from "lucide-react";
+import { Activity, Heart, Stethoscope, Shield, Baby, Sparkles } from "lucide-react";
 
 const services = [
   {
     icon: Activity,
-    title: "Individuální fyzioterapie",
-    description: "Personalizovaný terapeutický plán přizpůsobený vašim potřebám a cílům.",
+    title: "Bolesti zad",
+    description: "Efektivní terapie pro zmírnění bolestí zad a obnovení správné funkce páteře.",
   },
   {
     icon: Heart,
-    title: "Manuální terapie",
-    description: "Šetrné techniky pro uvolnění svalového napětí a zlepšení mobility kloubů.",
-  },
-  {
-    icon: Zap,
-    title: "Terapie bolesti",
-    description: "Cílené metody pro zmírnění akutní i chronické bolesti pohybového aparátu.",
-  },
-  {
-    icon: Dumbbell,
-    title: "Sportovní fyzioterapie",
-    description: "Prevence zranění a optimální příprava pro sportovní výkony.",
-  },
-  {
-    icon: Users,
-    title: "Pooperační rehabilitace",
-    description: "Komplexní péče po operacích pro rychlé a bezpečné zotavení.",
+    title: "Funkční poruchy",
+    description: "Diagnostika a léčba funkčních poruch pohybového aparátu.",
   },
   {
     icon: Stethoscope,
-    title: "Preventivní péče",
-    description: "Odborné poradenství pro udržení zdraví a prevenci problémů.",
+    title: "Stavy po úrazech a operacích",
+    description: "Komplexní rehabilitace pro rychlé a bezpečné zotavení po úrazech a operacích.",
+  },
+  {
+    icon: Shield,
+    title: "Prevence degenerativních poruch",
+    description: "Preventivní péče zaměřená na prevenci vzniku degenerativních onemocnění.",
+  },
+  {
+    icon: Baby,
+    title: "Problematika pánevního dna",
+    description: "Speciální terapie pro posílení a regeneraci svalů pánevního dna.",
+  },
+  {
+    icon: Sparkles,
+    title: "Bolestivá menstruace a inkontinence",
+    description: "Cílená terapie pro zmírnění bolestivé menstruace a řešení inkontinence.",
   },
 ];
 
