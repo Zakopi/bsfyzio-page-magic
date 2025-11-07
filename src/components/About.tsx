@@ -20,6 +20,7 @@ const goals = [
 const About = () => {
   const [yearsCount, setYearsCount] = useState(0);
   const [yearCount, setYearCount] = useState(2000);
+  const [patientsCount, setPatientsCount] = useState(0);
   const [hasAnimated, setHasAnimated] = useState(false);
   const statsRef = useRef<HTMLDivElement>(null);
 
@@ -59,6 +60,22 @@ const About = () => {
                 clearInterval(yearTimer);
               } else {
                 setYearCount(Math.floor(yearStart));
+              }
+            }, 16);
+            
+            // Animate patients count (99+)
+            let patientsStart = 0;
+            const patientsEnd = 99;
+            const patientsDuration = 2000;
+            const patientsIncrement = patientsEnd / (patientsDuration / 16);
+            
+            const patientsTimer = setInterval(() => {
+              patientsStart += patientsIncrement;
+              if (patientsStart >= patientsEnd) {
+                setPatientsCount(patientsEnd);
+                clearInterval(patientsTimer);
+              } else {
+                setPatientsCount(Math.floor(patientsStart));
               }
             }, 16);
           }
@@ -140,6 +157,12 @@ const About = () => {
                       {yearCount}
                     </div>
                     <p className="text-muted-foreground">V praxi od roku</p>
+                  </div>
+                  <div>
+                    <div className="text-4xl font-bold text-primary mb-2">
+                      {patientsCount}+
+                    </div>
+                    <p className="text-muted-foreground">Spokojených pacientů</p>
                   </div>
                   <div>
                     <p className="text-foreground font-medium mb-3">Speciální zaměření:</p>
