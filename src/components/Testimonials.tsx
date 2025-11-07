@@ -43,7 +43,12 @@ const Testimonials = () => {
                 <Quote className="h-10 w-10 text-primary/20 mb-4" />
                 
                 <div className="flex gap-1 mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => <Star key={i} className="h-5 w-5 fill-primary text-primary animate-scale-in" style={{animationDelay: `${i * 0.1}s`}} />)}
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star 
+                      key={i} 
+                      className="h-5 w-5 fill-primary text-primary transition-transform duration-300 hover:scale-125 hover:rotate-12" 
+                    />
+                  ))}
                 </div>
 
                 <p className="text-muted-foreground mb-6 leading-relaxed italic">"Po úrazu ramene jsem byl v péči několika terapeutů, ale teprve zde jsem dosáhl skutečného zlepšení. Individuální přístup a odbornost na vysoké úrovni."{testimonial.text}"
