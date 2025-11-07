@@ -54,7 +54,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-background/20 pt-8 text-center text-background/70">
-          <p>© 2025 Vytvořil Jiří Zakopal. Všechna práva vyhrazena.{new Date().getFullYear()} B.S. Fyzio. Všechna práva vyhrazena.</p>
+          <p>© 2025 Vytvořil Jiří Zakopal. Všechna práva vyhrazena.</p>
         </div>
       </div>
     </footer>;
