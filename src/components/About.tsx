@@ -21,9 +21,9 @@ const About = () => {
           timersRef.current.forEach(timer => clearInterval(timer));
           timersRef.current = [];
 
-          // Animate years of experience (10+)
+          // Animate years of experience (dynamically calculated from 2012)
           let yearsStart = 0;
-          const yearsEnd = 10;
+          const yearsEnd = new Date().getFullYear() - 2012;
           const yearsDuration = 2000;
           const yearsIncrement = yearsEnd / (yearsDuration / 16);
           const yearsTimer = setInterval(() => {
