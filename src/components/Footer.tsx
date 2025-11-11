@@ -18,9 +18,7 @@ const Footer = () => {
               <li>Rehapron s.r.o. Bílovec</li>
               <li className="pt-2">Tel: 605 271 925</li>
               <li>
-                <a href="https://www.elitefyzio.cz" target="_blank" rel="noopener noreferrer" className="hover:text-background transition-colors">
-                  www.elitefyzio.cz
-                </a>
+                
               </li>
               <li>
                 <a href="https://www.rehapron.cz" target="_blank" rel="noopener noreferrer" className="hover:text-background transition-colors">
