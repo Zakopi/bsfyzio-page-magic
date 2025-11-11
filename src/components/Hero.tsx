@@ -21,8 +21,8 @@ const Hero = () => {
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="text-lg"
-                onClick={() => document.getElementById('sluzby')?.scrollIntoView({ behavior: 'smooth' })}
+                className="text-lg transition-all duration-300 hover:scale-105 active:scale-95"
+                onClick={() => document.getElementById('sluzby')?.scrollIntoView({ behavior: 'smooth', block: 'start' })}
               >
                 Zjistit více
               </Button>
