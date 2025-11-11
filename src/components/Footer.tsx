@@ -4,7 +4,7 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
-            <h3 className="text-2xl font-bold mb-4">B.S. Fyzio</h3>
+            <h3 className="text-2xl font-bold mb-4">B.S.FYZIO</h3>
             <p className="text-background/80 leading-relaxed">
               Profesionální fyzioterapeutická péče s individuálním přístupem. 
               Pomohu vám vrátit se do formy a žít bez bolesti.
