@@ -34,7 +34,7 @@ const Hero = () => {
             </div>
           </div>
           
-          <div className="order-1 md:order-2 flex justify-center">
+          <div className="order-1 md:order-2 flex justify-center mt-12 md:mt-0">
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-primary rounded-full blur-3xl opacity-20 scale-110" />
               <img src={heroImage} alt="Profesionální fyzioterapeutka" className="relative rounded-full w-80 h-80 md:w-96 md:h-96 object-cover shadow-elegant border-[6px] border-accent/60" />
