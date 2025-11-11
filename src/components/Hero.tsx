@@ -2,6 +2,35 @@ import { Button } from "@/components/ui/button";
 import { Phone } from "lucide-react";
 import heroImage from "@/assets/hero-physiotherapist-new.jpg";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+
+const smoothScrollTo = (elementId: string, duration: number = 1500) => {
+  const element = document.getElementById(elementId);
+  if (!element) return;
+
+  const targetPosition = element.getBoundingClientRect().top + window.pageYOffset;
+  const startPosition = window.pageYOffset;
+  const distance = targetPosition - startPosition;
+  let startTime: number | null = null;
+
+  const animation = (currentTime: number) => {
+    if (startTime === null) startTime = currentTime;
+    const timeElapsed = currentTime - startTime;
+    const progress = Math.min(timeElapsed / duration, 1);
+    
+    // Easing function for smoother animation
+    const easeInOutCubic = (t: number) => 
+      t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+    
+    window.scrollTo(0, startPosition + distance * easeInOutCubic(progress));
+
+    if (timeElapsed < duration) {
+      requestAnimationFrame(animation);
+    }
+  };
+
+  requestAnimationFrame(animation);
+};
+
 const Hero = () => {
   const {
     ref,
@@ -18,7 +47,7 @@ const Hero = () => {
                 size="lg" 
                 variant="default" 
                 className="text-lg transition-all duration-300 hover:scale-105 active:scale-95"
-                onClick={() => document.getElementById('kontakt')?.scrollIntoView({ behavior: 'smooth', block: 'start' })}
+                onClick={() => smoothScrollTo('kontakt', 1500)}
               >
                 <Phone className="mr-2 h-5 w-5" />
                 Objednat se
@@ -27,7 +56,7 @@ const Hero = () => {
                 size="lg" 
                 variant="outline" 
                 className="text-lg transition-all duration-300 hover:scale-105 active:scale-95"
-                onClick={() => document.getElementById('sluzby')?.scrollIntoView({ behavior: 'smooth', block: 'start' })}
+                onClick={() => smoothScrollTo('sluzby', 1500)}
               >
                 Zjistit více
               </Button>
