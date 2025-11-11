@@ -117,7 +117,7 @@ const About = () => {
             </p>
             <div className="space-y-3 mb-6">
               {goals.map((goal, index) => <div key={index} className="flex items-start gap-3">
-                  <span className="text-primary font-bold">👊</span>
+                  <CheckCircle className="h-6 w-6 text-primary mt-0.5 flex-shrink-0" />
                   <span className="text-foreground">{goal}</span>
                 </div>)}
             </div>
