@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Phone } from "lucide-react";
-import heroImage from "@/assets/hero-physiotherapist.jpg";
+import heroImage from "@/assets/hero-physiotherapist-new.jpg";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 const Hero = () => {
   const {
