@@ -2,39 +2,33 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
-
-const contactInfo = [
-  {
-    icon: Phone,
-    title: "Telefon",
-    content: "605 271 925",
-    link: "tel:+420605271925",
-  },
-  {
-    icon: Mail,
-    title: "Email",
-    content: "sokolova.b@email.cz",
-    link: "mailto:sokolova.b@email.cz",
-  },
-  {
-    icon: MapPin,
-    title: "Lokace",
-    content: "EliteFyzio s.r.o. Ostrava • Rehapron s.r.o. Bílovec",
-    link: "#",
-  },
-  {
-    icon: Clock,
-    title: "Ordinační hodiny",
-    content: "Po-Pá: 8:00 - 18:00",
-    link: "#",
-  },
-];
-
+const contactInfo = [{
+  icon: Phone,
+  title: "Telefon",
+  content: "605 271 925",
+  link: "tel:+420605271925"
+}, {
+  icon: Mail,
+  title: "Email",
+  content: "sokolova.b@email.cz",
+  link: "mailto:sokolova.b@email.cz"
+}, {
+  icon: MapPin,
+  title: "Lokace",
+  content: "EliteFyzio s.r.o. Ostrava • Rehapron s.r.o. Bílovec",
+  link: "#"
+}, {
+  icon: Clock,
+  title: "Ordinační hodiny",
+  content: "Po-Pá: 8:00 - 18:00",
+  link: "#"
+}];
 const Contact = () => {
-  const { ref, isVisible } = useScrollAnimation();
-  
-  return (
-    <section id="kontakt" ref={ref} className={`py-20 bg-secondary/30 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+  const {
+    ref,
+    isVisible
+  } = useScrollAnimation();
+  return <section id="kontakt" ref={ref} className={`py-20 bg-secondary/30 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
@@ -48,9 +42,8 @@ const Contact = () => {
         <div className="max-w-3xl mx-auto">
           <div className="space-y-6">
             {contactInfo.map((info, index) => {
-              const Icon = info.icon;
-              return (
-                <Card key={index} className="border-2 hover:shadow-soft transition-shadow">
+            const Icon = info.icon;
+            return <Card key={index} className="border-2 hover:shadow-soft transition-shadow">
                   <CardContent className="p-6">
                     <div className="flex items-start gap-4">
                       <div className="w-12 h-12 rounded-lg bg-gradient-primary flex items-center justify-center flex-shrink-0">
@@ -60,37 +53,19 @@ const Contact = () => {
                         <h3 className="font-semibold text-lg mb-1 text-foreground">
                           {info.title}
                         </h3>
-                        <a
-                          href={info.link}
-                          className="text-muted-foreground hover:text-primary transition-colors"
-                        >
+                        <a href={info.link} className="text-muted-foreground hover:text-primary transition-colors">
                           {info.content}
                         </a>
                       </div>
                     </div>
                   </CardContent>
-                </Card>
-              );
-            })}
+                </Card>;
+          })}
 
-            <Card className="border-2 bg-gradient-primary text-primary-foreground">
-              <CardContent className="p-6">
-                <h3 className="font-bold text-xl mb-3">První konzultace zdarma</h3>
-                <p className="mb-4 text-primary-foreground/90">
-                  Objednejte se na první konzultaci a společně probereme váš zdravotní stav 
-                  a nastavíme individuální terapeutický plán.
-                </p>
-                <Button variant="accent" size="lg" className="w-full">
-                  <Phone className="mr-2 h-5 w-5" />
-                  Objednat se nyní
-                </Button>
-              </CardContent>
-            </Card>
+            
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Contact;
