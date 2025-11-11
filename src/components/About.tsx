@@ -122,7 +122,7 @@ const About = () => {
                 </div>)}
             </div>
 
-            <p className="text-lg text-muted-foreground leading-relaxed italic">Fyzioterapie pomáhá lidem vracet radost z pohybu a znovu objevovat sílu vlastního těla. Ráda pomohu vašemu tělu znovu naslouchat a vnímat jej.</p>
+            
           </div>
 
           <div className="relative">
