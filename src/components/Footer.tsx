@@ -43,7 +43,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-background/20 pt-8 text-center text-background/70">
-          <p>© 2025 Vytvořil webzahubicku.cz. Všechna práva vyhrazena.<a href="https://www.webzahubicku.cz" target="_blank" rel="noopener noreferrer" className="underline hover:text-background/60 transition-colors">webzahubicku.cz</a>. Všechna práva vyhrazena.<a href="mailto:jiri.zakopal@gmail.com" className="underline hover:text-background/60 transition-colors">Jiří Zakopal</a>. Všechna práva vyhrazena.</p>
+          <p>© 2025 Vytvořil <a href="https://www.webzahubicku.cz" target="_blank" rel="noopener noreferrer" className="underline hover:text-background/60 transition-colors">webzahubicku.cz</a>. Všechna práva vyhrazena.</p>
         </div>
       </div>
     </footer>;
