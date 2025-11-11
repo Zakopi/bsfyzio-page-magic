@@ -14,7 +14,12 @@ const Hero = () => {
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight text-foreground">B.S.FYZIO profesionální fyzioterapie</h1>
             <p className="text-xl md:text-2xl mb-8 text-muted-foreground leading-relaxed">Fyzioterapie pomáhá lidem vracet radost z pohybu a znovu objevovat sílu vlastního těla. Ráda pomohu vašemu tělu znovu naslouchat a vnímat jej.</p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" variant="default" className="text-lg">
+              <Button 
+                size="lg" 
+                variant="default" 
+                className="text-lg transition-all duration-300 hover:scale-105 active:scale-95"
+                onClick={() => document.getElementById('kontakt')?.scrollIntoView({ behavior: 'smooth', block: 'start' })}
+              >
                 <Phone className="mr-2 h-5 w-5" />
                 Objednat se
               </Button>
