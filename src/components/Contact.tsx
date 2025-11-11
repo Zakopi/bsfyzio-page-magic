@@ -9,8 +9,8 @@ const contactInfo = [
   {
     icon: Phone,
     title: "Telefon",
-    content: "+420 XXX XXX XXX",
-    link: "tel:+420XXXXXXXXX",
+    content: "605 271 925",
+    link: "tel:+420605271925",
   },
   {
     icon: Mail,
@@ -20,8 +20,8 @@ const contactInfo = [
   },
   {
     icon: MapPin,
-    title: "Adresa",
-    content: "Bílovec, Česká republika",
+    title: "Lokace",
+    content: "EliteFyzio s.r.o. Ostrava • Rehapron s.r.o. Bílovec",
     link: "#",
   },
   {

@@ -12,26 +12,19 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="text-lg font-semibold mb-4">Rychlé odkazy</h4>
-            <ul className="space-y-2">
+            <h4 className="text-lg font-semibold mb-4">Kontakt & Ordinace</h4>
+            <ul className="space-y-2 text-background/80">
+              <li>EliteFyzio s.r.o. Ostrava</li>
+              <li>Rehapron s.r.o. Bílovec</li>
+              <li className="pt-2">Tel: 605 271 925</li>
               <li>
-                <a href="#sluzby" className="text-background/80 hover:text-background transition-colors">
-                  Služby
+                <a href="https://www.elitefyzio.cz" target="_blank" rel="noopener noreferrer" className="hover:text-background transition-colors">
+                  www.elitefyzio.cz
                 </a>
               </li>
               <li>
-                <a href="#o-mne" className="text-background/80 hover:text-background transition-colors">
-                  O mně
-                </a>
-              </li>
-              <li>
-                <a href="#kontakt" className="text-background/80 hover:text-background transition-colors">
-                  Kontakt
-                </a>
-              </li>
-              <li>
-                <a href="#cenik" className="text-background/80 hover:text-background transition-colors">
-                  Ceník
+                <a href="https://www.rehapron.cz" target="_blank" rel="noopener noreferrer" className="hover:text-background transition-colors">
+                  www.rehapron.cz
                 </a>
               </li>
             </ul>
