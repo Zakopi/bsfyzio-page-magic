@@ -1,7 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
+import { Card, CardContent } from "@/components/ui/card";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
@@ -47,50 +45,7 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
-          <div>
-            <Card className="border-2">
-              <CardHeader>
-                <CardTitle className="text-2xl">Napište mi</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <form className="space-y-6">
-                  <div>
-                    <label htmlFor="name" className="text-sm font-medium text-foreground mb-2 block">
-                      Jméno a příjmení
-                    </label>
-                    <Input id="name" placeholder="Vaše jméno" />
-                  </div>
-                  <div>
-                    <label htmlFor="email" className="text-sm font-medium text-foreground mb-2 block">
-                      Email
-                    </label>
-                    <Input id="email" type="email" placeholder="vas@email.cz" />
-                  </div>
-                  <div>
-                    <label htmlFor="phone" className="text-sm font-medium text-foreground mb-2 block">
-                      Telefon
-                    </label>
-                    <Input id="phone" type="tel" placeholder="+420 XXX XXX XXX" />
-                  </div>
-                  <div>
-                    <label htmlFor="message" className="text-sm font-medium text-foreground mb-2 block">
-                      Zpráva
-                    </label>
-                    <Textarea
-                      id="message"
-                      placeholder="Popište prosím váš dotaz nebo zdravotní problém..."
-                      rows={5}
-                    />
-                  </div>
-                  <Button type="submit" size="lg" className="w-full" variant="hero">
-                    Odeslat zprávu
-                  </Button>
-                </form>
-              </CardContent>
-            </Card>
-          </div>
-
+        <div className="max-w-3xl mx-auto">
           <div className="space-y-6">
             {contactInfo.map((info, index) => {
               const Icon = info.icon;
