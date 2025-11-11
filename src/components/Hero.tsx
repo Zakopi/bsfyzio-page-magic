@@ -18,7 +18,12 @@ const Hero = () => {
                 <Phone className="mr-2 h-5 w-5" />
                 Objednat se
               </Button>
-              <Button size="lg" variant="outline" className="text-lg">
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="text-lg"
+                onClick={() => document.getElementById('sluzby')?.scrollIntoView({ behavior: 'smooth' })}
+              >
                 Zjistit více
               </Button>
             </div>
