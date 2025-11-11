@@ -21,9 +21,7 @@ const Footer = () => {
                 
               </li>
               <li>
-                <a href="https://www.rehapron.cz" target="_blank" rel="noopener noreferrer" className="hover:text-background transition-colors">
-                  www.rehapron.cz
-                </a>
+                <a href="https://www.rehapron.cz" target="_blank" rel="noopener noreferrer" className="hover:text-background transition-colors">E-mail: </a>
               </li>
             </ul>
           </div>
