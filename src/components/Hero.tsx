@@ -39,7 +39,7 @@ const Hero = () => {
                 className="text-lg transition-all duration-300 hover:scale-105 active:scale-95"
                 asChild
               >
-                <a href="https://elitefyzio-s-r-o.reservio.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://elitefyzio.cz/objednavka/" target="_blank" rel="noopener noreferrer">
                   <Phone className="mr-2 h-5 w-5" />
                   Objednat se - Ostrava
                 </a>
