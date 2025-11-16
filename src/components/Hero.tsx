@@ -23,28 +23,30 @@ const Hero = () => {
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-4 leading-tight text-foreground">B.S.FYZIO profesionální fyzioterapie</h1>
             <p className="text-lg md:text-xl italic text-primary/80 mb-6 font-light">„I malou změnou dokážeme ovlivnit velké věci."</p>
             <p className="text-xl md:text-2xl mb-8 text-muted-foreground leading-relaxed">Fyzioterapie pomáhá lidem vracet radost z pohybu a znovu objevovat sílu vlastního těla. Ráda pomohu vašemu tělu znovu naslouchat a vnímat jej.</p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col gap-3">
               <Button 
                 size="lg" 
                 variant="default" 
-                className="text-lg transition-all duration-300 hover:scale-105 active:scale-95" 
+                className="text-base sm:text-lg transition-all duration-300 hover:scale-105 active:scale-95 w-full" 
                 onClick={() => setIsDialogOpen(true)}
               >
-                <Phone className="mr-2 h-5 w-5" />
-                Objednat se - Bílovec
+                <Phone className="mr-2 h-5 w-5 flex-shrink-0" />
+                <span className="hidden sm:inline">Objednat se - Bílovec</span>
+                <span className="sm:hidden">Bílovec</span>
               </Button>
               <Button 
                 size="lg" 
                 variant="default" 
-                className="text-lg transition-all duration-300 hover:scale-105 active:scale-95"
+                className="text-base sm:text-lg transition-all duration-300 hover:scale-105 active:scale-95 w-full"
                 asChild
               >
-                <a href="https://elitefyzio.cz/objednavka/" target="_blank" rel="noopener noreferrer">
-                  <Phone className="mr-2 h-5 w-5" />
-                  Objednat se - Ostrava (Pobočka Centrum)
+                <a href="https://elitefyzio.cz/objednavka/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center">
+                  <Phone className="mr-2 h-5 w-5 flex-shrink-0" />
+                  <span className="hidden sm:inline">Objednat se - Ostrava (Pobočka Centrum)</span>
+                  <span className="sm:hidden">Ostrava Centrum</span>
                 </a>
               </Button>
-              <Button size="lg" variant="outline" className="text-lg transition-all duration-300 hover:scale-105 active:scale-95" onClick={() => document.getElementById('sluzby')?.scrollIntoView({
+              <Button size="lg" variant="outline" className="text-base sm:text-lg transition-all duration-300 hover:scale-105 active:scale-95 w-full" onClick={() => document.getElementById('sluzby')?.scrollIntoView({
               behavior: 'smooth',
               block: 'start'
             })}>
