@@ -15,7 +15,7 @@ const contactInfo = [{
 }, {
   icon: MapPin,
   title: "Ostrava",
-  content: "EliteFyzio s.r.o. • Po, St, Čt: 7:00 - 14:00",
+  content: "EliteFyzio s.r.o., Roháčova 3339/3, 702 00 Ostrava • Po, St, Čt: 7:00 - 14:00",
   link: "https://elitefyzio.cz"
 }, {
   icon: MapPin,
