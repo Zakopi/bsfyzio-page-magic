@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Mail } from "lucide-react";
+import { Instagram, Mail } from "lucide-react";
 const Footer = () => {
   return <footer className="bg-foreground text-background py-12">
       <div className="container mx-auto px-4">
@@ -39,9 +39,6 @@ const Footer = () => {
             <div className="flex gap-4">
               <a href="https://www.instagram.com/b.s.fyzio/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-background/10 hover:bg-background/20 flex items-center justify-center transition-colors">
                 <Instagram className="h-5 w-5" />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-background/10 hover:bg-background/20 flex items-center justify-center transition-colors">
-                <Facebook className="h-5 w-5" />
               </a>
               <a href="mailto:sokolova.b@email.cz" className="w-10 h-10 rounded-full bg-background/10 hover:bg-background/20 flex items-center justify-center transition-colors">
                 <Mail className="h-5 w-5" />
