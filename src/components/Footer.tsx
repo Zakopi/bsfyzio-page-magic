@@ -13,16 +13,18 @@ const Footer = () => {
 
           <div>
             <h4 className="text-lg font-semibold mb-4">Kontakt & Ordinace</h4>
-            <ul className="space-y-2 text-background/80">
+            <ul className="space-y-3 text-background/80">
               <li>
                 <a href="https://elitefyzio.cz" target="_blank" rel="noopener noreferrer" className="hover:text-background transition-colors">
-                  EliteFyzio s.r.o. Ostrava
+                  <strong>EliteFyzio s.r.o. Ostrava</strong>
                 </a>
+                <p className="text-sm">Roháčova 3339/3, 702 00 Ostrava</p>
               </li>
               <li>
                 <a href="https://www.rehapron.cz" target="_blank" rel="noopener noreferrer" className="hover:text-background transition-colors">
-                  Rehapron s.r.o. Bílovec
+                  <strong>Rehapron s.r.o. Bílovec</strong>
                 </a>
+                <p className="text-sm">Nová cesta 531/11, 743 01 Bílovec</p>
               </li>
               <li className="pt-2">
                 <a href="tel:+420605271925" className="hover:text-background transition-colors">
@@ -30,10 +32,9 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                
-              </li>
-              <li>
-                
+                <a href="mailto:sokolova.b@email.cz" className="hover:text-background transition-colors">
+                  sokolova.b@email.cz
+                </a>
               </li>
             </ul>
           </div>
