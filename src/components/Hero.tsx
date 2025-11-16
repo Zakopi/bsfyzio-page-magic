@@ -67,10 +67,10 @@ const Hero = () => {
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
         <DialogContent className="sm:max-w-md">
           <DialogHeader>
-            <DialogTitle className="text-2xl">Pracoviště Bílovec</DialogTitle>
-            <DialogDescription className="text-base pt-4 space-y-4">
-              <div className="flex items-start gap-3">
-                <MapPin className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+            <DialogTitle className="text-2xl text-center">Pracoviště Bílovec</DialogTitle>
+            <DialogDescription className="text-base pt-4 space-y-4 text-center">
+              <div className="flex flex-col items-center gap-2">
+                <MapPin className="h-5 w-5 text-primary flex-shrink-0" />
                 <div>
                   <p className="font-semibold text-foreground">Adresa:</p>
                   <p>Rehapron s.r.o.</p>
@@ -79,16 +79,16 @@ const Hero = () => {
                 </div>
               </div>
               
-              <div className="flex items-start gap-3">
-                <Clock className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+              <div className="flex flex-col items-center gap-2">
+                <Clock className="h-5 w-5 text-primary flex-shrink-0" />
                 <div>
                   <p className="font-semibold text-foreground">Ordinační hodiny:</p>
                   <p>Úterý: 12:00 - 18:00</p>
                 </div>
               </div>
 
-              <div className="flex items-start gap-3">
-                <Phone className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+              <div className="flex flex-col items-center gap-2">
+                <Phone className="h-5 w-5 text-primary flex-shrink-0" />
                 <div>
                   <p className="font-semibold text-foreground">Kontakt:</p>
                   <p>Pro objednání volejte:</p>
