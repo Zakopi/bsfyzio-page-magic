@@ -20,7 +20,7 @@ const contactInfo = [{
 }, {
   icon: MapPin,
   title: "Bílovec",
-  content: "Rehapron s.r.o. • Út: 12:00 - 18:00",
+  content: "Rehapron s.r.o., Nová cesta 531/11, 743 01 Bílovec • Út: 12:00 - 18:00",
   link: "https://www.rehapron.cz"
 }];
 const Contact = () => {
