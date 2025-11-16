@@ -16,7 +16,7 @@ const contactInfo = [{
   icon: MapPin,
   title: "Ostrava",
   content: "EliteFyzio s.r.o. • Po, St, Čt: 7:00 - 14:00",
-  link: "#"
+  link: "https://elitefyzio.cz"
 }, {
   icon: MapPin,
   title: "Bílovec",
