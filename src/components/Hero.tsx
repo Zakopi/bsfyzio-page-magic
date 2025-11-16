@@ -12,7 +12,8 @@ const Hero = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="order-2 md:order-1">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight text-foreground">B.S.FYZIO profesionální fyzioterapie</h1>
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-4 leading-tight text-foreground">B.S.FYZIO profesionální fyzioterapie</h1>
+            <p className="text-lg md:text-xl italic text-primary/80 mb-6 font-light">„I malou změnou dokážeme ovlivnit velké věci"</p>
             <p className="text-xl md:text-2xl mb-8 text-muted-foreground leading-relaxed">Fyzioterapie pomáhá lidem vracet radost z pohybu a znovu objevovat sílu vlastního těla. Ráda pomohu vašemu tělu znovu naslouchat a vnímat jej.</p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 
