@@ -21,7 +21,7 @@ const contactInfo = [{
   icon: MapPin,
   title: "Bílovec",
   content: "Rehapron s.r.o. • Út: 12:00 - 18:00",
-  link: "#"
+  link: "https://www.rehapron.cz"
 }];
 const Contact = () => {
   const {
