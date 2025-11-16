@@ -97,9 +97,9 @@ const About = () => {
               O mně
             </h2>
             <p className="text-xl text-muted-foreground mb-6 leading-relaxed">
-              Jsem fyzioterapeutka v praxi od roku 2012, takže už více než {new Date().getFullYear() - 2012} let 
-              pomáhám lidem zbavit se bolesti, vrátit se k pohybu a znovu se cítit 
-              dobře ve svém těle.
+              Jsem fyzioterapeutka v praxi od roku 2012, takže už více než {new Date().getFullYear() - 2012} let. 
+              Pomáhám lidem najít radost z pohybu - bez bolesti a s respektem k jejich tělu a tempu. 
+              Baví mě objevovat souvislosti, hledat příčiny potíží a cíleně pak s nimi pracovat.
             </p>
             <p className="text-xl text-muted-foreground mb-6 leading-relaxed">
               Věnuji se širokému spektru potíží pohybového aparátu, jako jsou například:
