@@ -14,13 +14,13 @@ const contactInfo = [{
   link: "mailto:sokolova.b@email.cz"
 }, {
   icon: MapPin,
-  title: "Lokace",
-  content: "EliteFyzio s.r.o. Ostrava • Rehapron s.r.o. Bílovec",
+  title: "Ostrava",
+  content: "EliteFyzio s.r.o. • Po, St, Čt: 7:00 - 14:00",
   link: "#"
 }, {
-  icon: Clock,
-  title: "Ordinační hodiny",
-  content: "Po-Pá: 8:00 - 18:00",
+  icon: MapPin,
+  title: "Bílovec",
+  content: "Rehapron s.r.o. • Út: 12:00 - 18:00",
   link: "#"
 }];
 const Contact = () => {
