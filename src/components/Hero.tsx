@@ -41,7 +41,7 @@ const Hero = () => {
               >
                 <a href="https://elitefyzio.cz/objednavka/" target="_blank" rel="noopener noreferrer">
                   <Phone className="mr-2 h-5 w-5" />
-                  Objednat se - Ostrava
+                  Objednat se - Ostrava (Pobočka Centrum)
                 </a>
               </Button>
               <Button size="lg" variant="outline" className="text-lg transition-all duration-300 hover:scale-105 active:scale-95" onClick={() => document.getElementById('sluzby')?.scrollIntoView({
