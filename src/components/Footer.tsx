@@ -24,7 +24,11 @@ const Footer = () => {
                   Rehapron s.r.o. Bílovec
                 </a>
               </li>
-              <li className="pt-2">Tel: 605 271 925</li>
+              <li className="pt-2">
+                <a href="tel:+420605271925" className="hover:text-background transition-colors">
+                  Tel: 605 271 925
+                </a>
+              </li>
               <li>
                 
               </li>
