@@ -1,7 +1,7 @@
 import { CheckCircle } from "lucide-react";
 import { useEffect, useState, useRef } from "react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
-const services = ["Bolesti zad", "Funkční poruchy", "Stavy po úrazech a operacích", "Prevence vzniku degenerativních poruch", "Problematika pánevního dna", "Bolestivá menstruace a inkontinence"];
+const services = ["Funkční poruchy pohybového aparátu", "Poúrazové a pooperační stavy", "Urogynekologická fyzioterapie", "Bolestivé stavy pohybového aparátu – akutní i chronické", "Preventivní fyzioterapie", "Fyzioterapie u sportovců"];
 const goals = ["Individuální přístup", "Hledání souvislostí", "Pátrání po příčinách", "Pomáhat k pohybu bez bolesti"];
 const About = () => {
   const {
